@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <h1>Hi student, Welcome to XYZ University!</h1>
+    <p>You can sign up to access all important notes & lectures.</p>
+
+    <!-- SIMPLE FORM - NO JavaScript -->
+    <form action="./addUser" method="POST">
+        <div>
+            <label>Name: </label>
+            <input type="text" name="name" required>
+        </div>
+        <div>
+            <label>Email: </label>
+            <input type="email" name="email" required>
+        </div>
+        <div>
+            <label>Username: </label>
+            <input type="text" name="username" required>
+        </div>
+        <div>
+            <label>Password: </label>
+            <input type="password" name="password" required>
+        </div>
+
+        <button type="submit">Create Account</button>
+    </form>
+
+    <div style="margin-top: 20px;">
+        <a href="./getUsers" target="_blank">View All Users</a>
+    </div>
+
+    <div style="margin-top: 20px; color: green;">
+        <p>✅ Manual POST test successful</p>
+        <p>✅ GET /getUsers working</p>
+    </div>
+</body>
+
+</html>
