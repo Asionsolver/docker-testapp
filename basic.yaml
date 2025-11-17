@@ -1,0 +1,140 @@
+# inline comment
+# version: 3.2
+chai_type: green
+sugar_level: medium
+temperature: hot
+serving: 2
+brew_time: 5
+
+chai_recipe:
+  base: black_tea
+  milk: whole_milk
+
+chai_recipe_two:
+  base: green_tea
+  milk: almond_milk
+
+# Data types
+
+# string
+chai_name: masala & chai
+# best practices to use double quotes for strings with special characters
+description: "A spiced tea beverage popular in India!"
+# best practices to use single quotes for strings with apostrophes
+tagline: "The perfect blend of spices and tea's warmth."
+
+# pipelines for multi-line strings
+brewing_instructions: |
+  1. Boil water.
+  2. Add tea leaves and spices.
+  3. Simmer for 5 minutes.
+  4. Add milk and sugar.
+  5. Strain and serve hot.
+
+# folded style for multi-line strings
+brewing_instructions_two: >
+  To brew the perfect cup of chai, start by boiling water.
+  Add your tea leaves and spices, then simmer for 5 minutes.
+  Finally, add milk and sugar to taste, strain, and enjoy!
+
+# number
+brew_temperature_celsius: 95.5
+brew_temperature_fahrenheit: 0x203F
+is_hot: true
+add_sugar: false
+add_salt: no
+instant_chai: on
+
+#null
+sweeteners: null
+spices: ~
+
+# Time and Date
+brew_time_iso_8601: 2024-10-01T10:30:00Z
+local_time: 2024-10-01 15:30:00
+
+# Lists
+spice_mix:
+  - cardamom
+  - cinnamon
+  - ginger
+  - cloves
+  - true
+  - black_pepper
+  - 200
+
+# old style list
+# spices:[nutmeg, star_anise, fennel]
+
+steeping_times_minutes: [3, 5, 7]
+
+chai_categories:
+  - traditional:
+      - name: masala_chai
+        ingredients:
+          - black_tea
+          - milk
+          - sugar
+          - cardamom
+          - cinnamon
+          - ginger
+      - name: ginger_chai
+        ingredients:
+          - black_tea
+          - milk
+          - sugar
+          - fresh_ginger
+
+masal_chai:
+  ingredients:
+    tea: black_tea
+    liquid:
+      water: 200ml
+      milk: 100ml
+    spices:
+      ginger: 5g
+      cardamom: 3 pods
+      cinnamon: 1 stick
+      cloves: 2
+  preparation_steps:
+    - Boil water and add tea leaves.
+    - Add spices and simmer for 5 minutes.
+    - Add milk and sugar to taste.
+    - Strain and serve hot.
+
+# list of dictionaries
+chai_menu:
+  - name: Masala Chai
+    price: 2.50
+    available: true
+    size: small
+  - name: Ginger Chai
+    price: 3.00
+    available: false
+    size: medium
+
+default_chai: &default_chai
+  base: black_tea
+  milk: whole_milk
+  sugar_level: medium
+  temperature: hot
+
+morning_chai:
+  <<: *default_chai
+  sugar_level: high
+
+evening_chai:
+  <<: *default_chai
+  temperature: warm
+
+# explicit data types
+zip_code: !!str 12345
+favorite_number: !!int "42"
+is_vegan: !!bool "true"
+pi_value: !!float "3.14159" 
+
+unique_spice: !!set
+  ? cardamom
+  ? saffron
+  ? star_anise
+  
